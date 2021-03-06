@@ -1,0 +1,11 @@
+<agm-map [latitude]='latitude' [longitude]='longitude'
+      [mapTypeId]='mapType'>
+    </agm-map>
+
+<input type="text" class="form-control" name="latitude" [(ngModel)]='location.latitude'
+  placeholder="Enter Latitude" required #latitude="ngModel">
+
+<input type="text" class="form-control" name="longitude" [(ngModel)]='location.longitude'
+  placeholder="Enter Longitude" required #longitude="ngModel">
+
+<input type="submit" class="form-control" name="Submit" (click)='onSubmitLocation(location)'>
